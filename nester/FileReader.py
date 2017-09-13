@@ -15,15 +15,5 @@ try:
     data.close()
 except IOError:
     print('The data file is not missing')
-#print(man)
-#print(other)
-try:
-    out_man=open("File/man_data.txt","w")
-    out_other=open("File/other_data.txt","w")
-    print(man,file=out_man)
-    print(other,file=out_other)
-    out_man.close()
-    out_other.close()
-except IOError:
-    print("File error")
-
+print(man)
+print(other)
