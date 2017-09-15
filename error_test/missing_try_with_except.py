@@ -1,3 +1,4 @@
+#with 是使用上下文协议来执行的，帮助关闭文件
 man = []
 other = []
 try:
@@ -18,13 +19,9 @@ except IOError:
 #print(man)
 #print(other)
 try:
-    out_man=open("File/man_data.txt","w")
-    out_other=open("File/other_data.txt","w")
-    print(man,file=out_man)
-    print(other,file=out_other)
-except IOError:
-    print("File error")
-finally:
-    out_man.close()
-    out_other.close()
-
+    with open("File/man_data.txt",'w') as man_file:
+        print(man,file=man_file)
+    with open("File/other_data.txt",'w') as other_file:
+        print(other,file=other_file)
+except IOError as err:
+    print('File Error',str(err))
