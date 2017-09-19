@@ -12,3 +12,5 @@ find() 在一个字字符串中查找一个特定子串
 not 关键字将一个条件求反
 try except 异常处理机制
 pass 语句 == null 或 空
+strip()从字符串去掉空格  text=text.strip()
+print() File参数指定输出，默认标准输出可重写
